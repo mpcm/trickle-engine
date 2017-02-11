@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'json'
+
+
+# debug
+gem 'pry'
+gem 'byebug'
+gem 'pry-byebug'
