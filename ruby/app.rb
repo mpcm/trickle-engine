@@ -2,10 +2,11 @@ require 'rubygems'
 require 'bundler/setup'
 require 'json'
 
-require 'trickle'
+require './trickle'
 
 require 'pry'
 require 'pry-byebug'
+require 'pp'
 
 # Trigger - array jsons path to watch
 # Impact - array json path to set
@@ -19,3 +20,18 @@ require 'pry-byebug'
 # A data. namespace should be reserved for the current data object scope
 # A fact. namespace should be reserved for table facts
 # A op. namespace should be reserved for operations like &&, ||, ==, >=
+
+
+e = Trickle.new()
+e.import 'facts', {
+	'13_82_bil' => 13820000000000,
+	'1321009871' => 'November 11, 2011'
+}
+
+e.set 'data.age.of.universe','facts.13_82_bil'
+e.set 'data.age.of.aquarius','facts.1321009871'
+
+
+
+puts "="*50
+pp e.store['data']
