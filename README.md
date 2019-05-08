@@ -1,5 +1,5 @@
 # trickle-engine
-a json rule engine experiment
+Trickle is several things. First it is a relationship syntax used to describe a relationship graph. Second it is a tool that either reads those relationship rules, or the graph, and attempts to process it. Third, when applied it can generate code from the graph instead of processing first hand.
 
 
 Generic rule evaluation:
